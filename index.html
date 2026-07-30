@@ -170,7 +170,7 @@
     const libLoadCache = {};
     const RECEIPT_BRAND={
       logo:'assets/sun_nishimura_logo.jpg',
-      companyEn:'SUN NISHIMURA CO., LTD.',
+      companyEn:'SAN NISHIMURA CO., LTD.',
       companyJa:'サンニシムラ株式会社',
       companyKo:'선 니시무라 주식회사',
       distributorName:'KY-S Corporation.',
@@ -707,7 +707,7 @@
       $('receiptPrintArea').innerHTML=`
         <div class="receiptHeaderSimple">
           <div class="receiptBrandBlock">
-            <img class="receiptBrandLogo" src="${sanitize(RECEIPT_BRAND.logo)}" alt="SUN NISHIMURA">
+            <img class="receiptBrandLogo" src="${sanitize(RECEIPT_BRAND.logo)}" alt="SAN NISHIMURA">
             <div class="receiptBrandText">
               <div class="receiptBrandName">${sanitize(RECEIPT_BRAND.companyEn)}</div>
               <div class="receiptBrandSub">${sanitize(RECEIPT_BRAND.companyJa)} / ${sanitize(RECEIPT_BRAND.companyKo)}<br>Korea Distributor: ${sanitize(RECEIPT_BRAND.distributorName)} | TEL ${sanitize(RECEIPT_BRAND.tel)}</div>
@@ -753,7 +753,7 @@
         <div class="receiptFooterGrid">
           <div class="receiptMemoStack">
             ${notesBlock}
-            <div class="receiptNote"><b>ご案内 / 안내</b>${sanitize(txt('receiptNote',lang))}</div>
+            <div class="receiptNote"><b>ご案内 / 안내</b>${sanitize(txt('receiptNote','ja')).split('\n').join('<br>')}<br><br>${sanitize(txt('receiptNote','ko')).split('\n').join('<br>')}</div>
           </div>
           <div>
             <div class="receiptSummaryBox">
