@@ -1,0 +1,16 @@
+本番接続を有効にするため、Supabaseから次の2項目が必要です。
+
+1. Project URL
+   例: https://abcdefghijk.supabase.co
+
+2. Publishable key
+   例: sb_publishable_xxxxxxxxxxxxxxxxx
+
+送ってはいけないもの：
+- Secret key
+- service_role key
+- データベースパスワード
+- Supabaseアカウントのパスワード
+
+GitHub Pages公開URLは設定済みです：
+https://masuda8105-prog.github.io/korea-exibition-sannishimura/

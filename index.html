@@ -421,7 +421,7 @@
       return !!(ONLINE_CONFIG.enabled && /^https:\/\//i.test(String(ONLINE_CONFIG.supabaseUrl||'')) && String(ONLINE_CONFIG.anonKey||'').trim() && /^https:\/\//i.test(String(ONLINE_CONFIG.publicAppUrl||'')));
     }
     function onlineFunctionUrl(){ return `${String(ONLINE_CONFIG.supabaseUrl||'').replace(/\/$/,'')}/functions/v1/${ONLINE_CONFIG.functionName||'exhibition-order'}`; }
-    function onlineHeaders(){ return {'apikey':String(ONLINE_CONFIG.anonKey||''),'Authorization':`Bearer ${String(ONLINE_CONFIG.anonKey||'')}`}; }
+    function onlineHeaders(){ return {'apikey':String(ONLINE_CONFIG.anonKey||'')}; }
     function setOnlineStatus(message='',type='info'){
       const el=$('onlineUploadStatus'); if(!el)return;
       el.textContent=message; el.className=`onlineUploadStatus${message?' show':''}${message?` ${type}`:''}`;

@@ -1,0 +1,5 @@
+supabase/.env.production
+.env
+.env.*
+!.env.example
+!supabase/.env.production.example

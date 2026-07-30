@@ -17,6 +17,10 @@ QRコードにはランダムな注文トークンだけを入れるため、ス
 
 ---
 
+
+> GitHub Pagesの本番Originは `https://masuda8105-prog.github.io` です。
+> `/korea-exibition-sannishimura/` はURLのパスなので、`ALLOWED_ORIGINS`には含めません。
+
 ## 1. Supabaseプロジェクトを作成
 
 Supabaseで新しいプロジェクトを1つ作成します。
@@ -24,7 +28,7 @@ Supabaseで新しいプロジェクトを1つ作成します。
 準備するもの：
 
 - Project URL
-- anon key または publishable key
+- Publishable key（`sb_publishable_...`）
 - Project Ref
 
 `service_role`キーはHTMLや `online-config.js` へ絶対に書かないでください。
@@ -56,7 +60,7 @@ Supabase CLIを使用します。
 ```bash
 supabase login
 supabase link --project-ref YOUR_PROJECT_REF
-supabase functions deploy exhibition-order
+supabase functions deploy exhibition-order --no-verify-jwt
 supabase functions deploy cleanup-orders --no-verify-jwt
 ```
 
@@ -64,7 +68,7 @@ supabase functions deploy cleanup-orders --no-verify-jwt
 
 ```bash
 supabase secrets set \
-  ALLOWED_ORIGINS="https://注文ツールを公開するドメイン" \
+  ALLOWED_ORIGINS="https://masuda8105-prog.github.io" \
   ORDER_RETENTION_DAYS="14" \
   SIGNED_URL_SECONDS="3600" \
   BUSINESS_CARD_BUCKET="business-cards" \
@@ -102,7 +106,7 @@ window.ORDER_ONLINE_CONFIG = Object.freeze({
   enabled: true,
   supabaseUrl: 'https://YOUR_PROJECT_REF.supabase.co',
   anonKey: 'YOUR_SUPABASE_ANON_OR_PUBLISHABLE_KEY',
-  publicAppUrl: 'https://YOUR_DOMAIN/path/index.html',
+  publicAppUrl: 'https://masuda8105-prog.github.io/korea-exibition-sannishimura/',
   functionName: 'exhibition-order'
 });
 ```

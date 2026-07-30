@@ -1,0 +1,118 @@
+# GitHub Pages 本番設定
+
+公開先：
+
+```text
+https://masuda8105-prog.github.io/korea-exibition-sannishimura/
+```
+
+このフォルダは、リポジトリ `masuda8105-prog/korea-exibition-sannishimura` のルートへ上書き配置する構成です。
+
+## すでに設定済みの項目
+
+- `publicAppUrl`：上記GitHub Pages URL
+- Edge Functionの許可元：`https://masuda8105-prog.github.io`
+  - ブラウザのOriginには `/korea-exibition-sannishimura/` のパスは含まれません。
+- GitHub Pages向け `.nojekyll`
+- 新しいSupabase Publishable key形式への対応
+- 名刺元画像と高画質プレビューの非公開保存
+- 別端末で名刺画像と注文明細を表示
+- 14日後の削除設定
+
+## 本番公開に残っている2項目
+
+Supabase Dashboardから次の2つを取得します。
+
+1. Project URL
+2. Publishable key（`sb_publishable_...`）
+
+**Secret key、service_role、データベースのパスワードはGitHubへ入れないでください。**
+
+`online-config.js` を次のように変更します。
+
+```js
+window.ORDER_ONLINE_CONFIG = Object.freeze({
+  enabled: true,
+  supabaseUrl: 'https://YOUR_PROJECT_REF.supabase.co',
+  anonKey: 'sb_publishable_...',
+  publicAppUrl: 'https://masuda8105-prog.github.io/korea-exibition-sannishimura/',
+  functionName: 'exhibition-order'
+});
+```
+
+## Supabase側の作業
+
+### 1. SQLを実行
+
+Supabase Dashboard → SQL Editorで、次を実行します。
+
+```text
+supabase/sql/01_schema.sql
+```
+
+### 2. Edge Functionsをデプロイ
+
+Supabase CLIで、このフォルダを開いて実行します。
+
+```bash
+supabase login
+supabase link --project-ref YOUR_PROJECT_REF
+supabase functions deploy exhibition-order --no-verify-jwt
+supabase functions deploy cleanup-orders --no-verify-jwt
+```
+
+### 3. 本番用環境変数を設定
+
+実際の秘密値を記入した `supabase/.env.production` を作成します。このファイルはGitHubへアップロードしないでください。
+
+```env
+ALLOWED_ORIGINS=https://masuda8105-prog.github.io
+ORDER_RETENTION_DAYS=14
+SIGNED_URL_SECONDS=3600
+BUSINESS_CARD_BUCKET=business-cards
+CLEANUP_SECRET=十分に長いランダム文字列
+```
+
+設定します。
+
+```bash
+supabase secrets set --env-file supabase/.env.production
+```
+
+### 4. 自動削除
+
+`supabase/sql/02_cleanup_schedule_example.sql` の次を実際の値へ変更して、SQL Editorで実行します。
+
+- `PROJECT_REF`
+- `CLEANUP_SECRET`
+
+## GitHub Pagesへの反映
+
+このフォルダの中身を、リポジトリのルートへ配置します。
+
+主なファイル：
+
+```text
+index.html
+online-config.js
+product_master_korea.csv
+product-images/
+assets/
+vendor/
+.nojekyll
+```
+
+`supabase/` フォルダはGitHub Pagesの画面では使用しませんが、バックエンド設定の管理用としてリポジトリへ保存できます。ただし、秘密値を書いた `.env.production` はコミットしません。
+
+## 本番確認
+
+1. GitHub Pagesをスマホで開く
+2. 商品を1点追加
+3. お客様情報を入力
+4. 名刺を撮影
+5. QRを発行
+6. 別のスマホでQRを読む
+7. 注文明細と名刺プレビューが表示される
+8. 「原寸画像を開く」で細かい文字が読める
+9. 控えを印刷し、名刺写真が入る
+10. Supabase Storageが非公開のままである
