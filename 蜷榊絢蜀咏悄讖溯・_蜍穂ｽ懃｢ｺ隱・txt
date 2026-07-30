@@ -1,0 +1,21 @@
+名刺写真機能 動作確認
+
+確認項目
+1. お客様情報画面に「名刺を撮影・選択 / 명함 촬영·선택」ボタンが表示される
+2. input[type=file] に accept="image/*" と capture="environment" が設定されている
+3. 撮影／選択画像を最大長辺1400px・JPEG品質0.78に圧縮する
+4. 撮影後にプレビューと削除ボタンが表示される
+5. 仮注文書控えのデータに名刺画像が含まれる
+6. スタッフ確認用QRのデータから名刺画像が除外される
+7. 注文番号をキーにsessionStorageへ保存し、同じ端末の控えで復元される
+8. 控えの印刷HTMLに名刺写真欄が生成される
+9. 注文履歴のlocalStorageには名刺画像を保存しない
+10. JavaScript構文チェックに合格
+
+テスト結果
+- camera/file image compression and preview UI: PASS
+- receipt photo included: PASS
+- staff QR excludes photo: PASS
+- session restore: PASS
+- print HTML photo block: PASS
+- JavaScript syntax: PASS

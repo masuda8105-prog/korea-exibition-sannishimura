@@ -1,0 +1,33 @@
+オンライン名刺共有版 動作確認
+実施日: 2026-07-30
+
+【ブラウザ結合テスト】
+画面サイズ: 390 × 844（スマートフォン相当）
+
+✓ 商品マスター読み込み
+✓ 品番1053を検索
+✓ 商品をカートへ追加
+✓ お客様情報画面を表示
+✓ 入力画面の内部スクロールを確認
+  clientHeight: 623px
+  scrollHeight: 849px
+  overflow-y: auto
+✓ 名刺撮影ボタンまでスクロール可能
+✓ 2400 × 1400pxの名刺画像を選択
+✓ 長辺2400pxの高画質プレビューを生成
+✓ 元画像とプレビュー画像をmultipartで送信
+✓ オンライン注文トークンを受信
+✓ 短いonline-staff URLからQRコードを生成
+✓ スタッフ別端末相当の画面で注文情報を取得
+✓ スタッフ画面に名刺写真を表示
+✓ 「原寸画像を開く」リンクを表示
+✓ JavaScript実行エラーなし
+
+【静的チェック】
+✓ index.html内のJavaScriptを node --check で確認
+✓ Edge Function 2ファイルをTypeScript transpileチェック
+✓ Supabase schema、private bucket、RLS設定ファイルを同梱
+
+【注意】
+実際のSupabaseへのアップロード試験は、利用者のSupabaseプロジェクト情報が必要です。
+設定後は「オンライン名刺共有_SETUP.md」の実機確認手順を実施してください。
