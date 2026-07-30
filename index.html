@@ -50,87 +50,117 @@
       .receiptSheet{box-shadow:none!important;border:0!important;border-radius:0!important;padding:0!important}
       .receiptHeaderSimple{grid-template-columns:minmax(0,1fr) 250px!important;gap:10px!important;padding-bottom:8px!important}.receiptBrandLogo{width:150px!important}.receiptBrandName{font-size:10px!important}.receiptBrandSub,.receiptDocSub,.receiptMetaLine{font-size:8px!important;line-height:1.35!important}.receiptDocTitle{font-size:17px!important}.receiptInfoBand{grid-template-columns:2fr 1fr 1.2fr 1fr 1fr 1fr!important;gap:5px!important;margin-top:8px!important}.receiptInfoCard{padding:5px 6px!important}.receiptInfoLabel{font-size:7px!important}.receiptInfoValue{font-size:9px!important;line-height:1.25!important;margin-top:2px!important}.receiptSection{margin-top:8px!important}.receiptSectionHead{margin-bottom:5px!important}.receiptSectionTitle{font-size:11px!important}.receiptSectionHint{font-size:8px!important}.receiptTable{font-size:9px!important;table-layout:fixed!important}.receiptTable th,.receiptTable td{padding:4px!important;line-height:1.2!important}.receiptTable col.code{width:76px!important}.receiptTable col.image{width:52px!important}.receiptTable col.qty{width:46px!important}.receiptTable col.unit{width:82px!important}.receiptTable col.subtotal{width:90px!important}.receiptThumb{width:36px!important;height:36px!important;border-radius:6px!important}.receiptItemSub{font-size:7px!important;margin-top:1px!important}.receiptImageNote{font-size:7px!important;margin-top:3px!important}.receiptFooterGrid{grid-template-columns:minmax(0,1fr) 200px!important;gap:8px!important;margin-top:8px!important}.receiptNote{font-size:8px!important;line-height:1.35!important;padding:6px!important}.receiptSummaryBox{padding:6px 8px!important}.receiptSummaryRow{font-size:8.5px!important;padding:3px 0!important}.receiptSummaryRow.total{font-size:14px!important;padding-top:5px!important}.receiptCurrencyNote{font-size:7px!important;margin-top:4px!important}.receiptFooterMini{margin-top:8px!important;padding-top:5px!important;font-size:7px!important;line-height:1.35!important}.receiptHeaderSimple,.receiptInfoCard,.receiptNote,.receiptSummaryBox,.receiptTable tr{break-inside:avoid!important;page-break-inside:avoid!important}img{max-width:100%!important}
     }
+
+    /* ===== 2026 mobile-first UI redesign ===== */
+    .newApp{max-width:none;margin:0;padding:0 16px 190px;background:#f4f5f7;min-height:100vh}
+    .appTopbar{position:fixed;top:0;left:0;right:0;z-index:70;background:#111827;color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+    .appTopbarInner{max-width:1320px;height:64px;margin:auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .appBrand{display:flex;align-items:center;gap:10px;min-width:0}.appBrandMark{width:34px;height:34px;border-radius:10px;background:#fff;color:#111827;display:grid;place-items:center;font-size:12px;font-weight:950}.appBrandTitle{font-size:13px;font-weight:950;letter-spacing:.06em;white-space:nowrap}.appBrandSub{font-size:10px;color:#cbd5e1;margin-top:2px}
+    .appTopControls{display:flex;align-items:center;gap:12px}.topTotal{display:flex;flex-direction:column;align-items:flex-end}.topTotal span{font-size:9px;color:#cbd5e1}.topTotal strong{font-size:20px;line-height:1.05}.topLang{display:flex;align-items:center;gap:5px;font-size:10px;color:#cbd5e1}.topLang select{width:auto;min-width:88px;padding:7px 26px 7px 9px;border-radius:999px;border-color:rgba(255,255,255,.2);background:#1f2937;color:#fff}
+    .searchDock{position:fixed;top:64px;left:0;right:0;z-index:65;background:rgba(244,245,247,.96);backdrop-filter:blur(14px);border-bottom:1px solid #dfe3e8;padding:10px 16px}
+    .searchDockInner{max-width:1320px;margin:auto}.searchTitleRow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px}.searchTitleRow strong{font-size:13px}.searchResultStatus{font-size:10px;color:#6b7280;margin-left:8px}.searchTip{font-size:10px;color:#6b7280}
+    .nativeSearchRow{height:52px;border:2px solid #111827;border-radius:16px;background:#fff;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:6px;padding:0 7px 0 13px;box-shadow:0 8px 22px rgba(15,23,42,.08)}.searchIcon{font-size:25px;line-height:1;color:#6b7280;transform:rotate(-18deg)}.nativeSearchInput{border:0!important;box-shadow:none!important;border-radius:0;padding:0 4px;font-size:20px;font-weight:900;letter-spacing:.05em;background:transparent}.nativeSearchInput::-webkit-search-cancel-button{display:none}.inputModeToggle,.clearSearchBtn{height:38px;min-width:48px;border-radius:11px;padding:0 10px;background:#eef2f7;color:#111827;border:1px solid #d1d5db;font-size:12px}.clearSearchBtn{min-width:38px;font-size:20px;padding:0}
+    .workspace{max-width:1320px;margin:0 auto;padding-top:148px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:16px;align-items:start}.productArea{min-width:0}.productGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;overflow:visible}.productGrid .empty{grid-column:1/-1}.product{grid-template-columns:86px minmax(0,1fr) auto;padding:11px;border-radius:16px;box-shadow:0 3px 10px rgba(15,23,42,.04)}.product .thumb{width:86px;height:86px;background:#fff}.product .thumb img{object-fit:contain}.product .price{font-size:15px}.productActions button{min-width:68px}.productActions [data-detail]{display:none}
+    .cartPanel{position:sticky;top:148px;background:#fff;border:1px solid #dfe3e8;border-radius:18px;box-shadow:0 12px 28px rgba(15,23,42,.08);overflow:hidden;max-height:calc(100vh - 164px);display:flex;flex-direction:column}.cartPeek{background:#111827;border-radius:0;padding:13px 14px;display:flex;justify-content:space-between;align-items:center;text-align:left;width:100%}.cartPeekLeft,.cartPeekRight{display:flex;align-items:center;gap:9px}.cartPeekRight{flex-direction:column;align-items:flex-end;gap:1px}.cartPeek b{display:block;font-size:15px}.cartPeek small{display:block;font-size:10px;color:#cbd5e1;margin-top:2px}.cartPeekRight strong{font-size:18px}.cartIcon{font-size:20px}.miniCartItems{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;border-bottom:1px solid #e5e7eb;min-height:48px}.miniCartChip{flex:0 0 auto;border:1px solid #d1d5db;background:#f9fafb;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:850;white-space:nowrap}.miniCartEmpty{font-size:11px;color:#9ca3af;align-self:center}.cartExpandedBody{min-height:0;overflow:auto;padding:10px}.cartPanelHead{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}.cartPanelHead h2{font-size:16px;margin:0}.cartPanelHead p{font-size:10px;color:#6b7280;margin:3px 0 0}.cartPanelHead #collapseCart{display:none}.orderItems{display:grid;gap:7px}.lineItem{grid-template-columns:52px minmax(0,1fr) auto;padding:8px;border-radius:13px}.lineItem .thumb{width:52px;height:52px}.lineItem .thumb img{object-fit:contain}.lineItem .pack{display:none}.qtyCtl{margin-top:5px}.qtyCtl button{width:30px;height:30px}.qtyCtl input{width:50px;padding:6px}.cartSubActions{margin-top:8px}.cartSubActions button{width:100%;padding:9px;font-size:12px}.cartPrimaryActions{padding:10px;border-top:1px solid #e5e7eb;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fff}.customerAction,.checkoutAction{min-height:52px;border-radius:14px;padding:8px 10px;display:flex;align-items:center;justify-content:center;gap:7px}.customerAction{background:#eef2f7;color:#111827;border:1px solid #d1d5db;text-align:left}.customerAction b,.customerAction small,.checkoutAction span,.checkoutAction small{display:block}.customerAction b,.checkoutAction span{font-size:13px}.customerAction small,.checkoutAction small{font-size:9px;margin-top:2px}.checkoutAction{background:#047857;color:#fff;flex-direction:column;gap:0}.staffTools{margin-top:10px;border:1px solid #e5e7eb;border-radius:12px}.staffTools summary{padding:9px 10px;font-size:11px}
+    .customerSheet{width:min(720px,calc(100vw - 24px));max-height:min(88dvh,780px);border-radius:24px;padding:0;overflow:hidden}.customerSheet::backdrop{background:rgba(15,23,42,.58)}.sheetHandle{display:none}.customerSheetHead{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 18px;border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:2}.customerSheetHead b{font-size:18px}.customerSheetHead p{font-size:11px;color:#6b7280;margin:4px 0 0}.customerSheetBody{padding:16px 18px;overflow:auto}.customerRequiredGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}.customerOptionalGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.customerSheet label>span:first-child{display:inline-block;font-size:12px;font-weight:850;margin:0 5px 6px 0}.notesField{display:block;margin-top:12px}.customerPrivacy{font-size:11px;color:#6b7280;background:#f9fafb;border-radius:11px;padding:9px 10px;margin-top:10px}.customerSheetActions{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #e5e7eb;background:#fff;position:sticky;bottom:0}.customerSheetActions button{min-height:50px;font-size:13px;white-space:nowrap}
+    .systemControls{display:none!important}
+    @media(max-width:1020px){.workspace{grid-template-columns:minmax(0,1fr) 330px}.productGrid{grid-template-columns:1fr}}
+    @media(max-width:760px){
+      .newApp{padding:0 9px 174px}.appTopbarInner{height:58px;padding:0 10px}.appBrandTitle{font-size:11px}.appBrandSub{display:none}.appBrandMark{width:30px;height:30px}.topLang span{display:none}.topLang select{min-width:80px;padding:6px 24px 6px 8px}.topTotal strong{font-size:17px}.searchDock{top:58px;padding:8px 9px}.searchTitleRow{margin-bottom:5px}.searchTip{display:none}.searchResultStatus{display:block;margin:2px 0 0}.nativeSearchRow{height:50px;border-radius:14px}.workspace{display:block;padding-top:134px}.productGrid{grid-template-columns:1fr;gap:8px}.product{grid-template-columns:74px minmax(0,1fr) auto;padding:9px}.product .thumb{width:74px;height:74px}.product .code{font-size:17px}.product .name{font-size:12px}.productActions button{min-width:58px;padding:9px 8px}
+      .cartPanel{position:fixed;left:8px;right:8px;bottom:8px;top:auto;z-index:80;max-height:none;border-radius:18px;box-shadow:0 14px 38px rgba(15,23,42,.26)}.cartPeek{padding:10px 12px}.cartPeek b{font-size:13px}.cartPeekRight strong{font-size:16px}.miniCartItems{padding:6px 8px;min-height:42px}.miniCartChip{font-size:10px;padding:5px 8px}.cartExpandedBody{display:none;max-height:calc(72dvh - 122px);padding:9px}.cartPanel.expanded .cartExpandedBody{display:block}.cartPanel.expanded{max-height:72dvh}.cartPanel.expanded .cartPanelHead #collapseCart{display:inline-flex}.lineItem{grid-template-columns:52px minmax(0,1fr)!important}.lineItem .right{grid-column:1/-1!important;display:flex!important;justify-content:space-between;align-items:center;gap:10px}.lineItem .right button{width:auto!important;min-width:82px}.lineItem .subtotal{margin:0 0 0 auto}.cartPrimaryActions{padding:8px;gap:6px}.customerAction,.checkoutAction{min-height:46px}.customerAction b,.checkoutAction span{font-size:12px}.customerAction small,.checkoutAction small{font-size:8px}.staffTools{display:none}
+      .customerSheet{position:fixed;left:0;right:0;bottom:0;margin:0;width:100%;max-width:none;max-height:92dvh;border-radius:24px 24px 0 0}.sheetHandle{display:block;width:44px;height:5px;border-radius:99px;background:#d1d5db;margin:8px auto 0}.customerSheetHead{padding:10px 14px 12px}.customerSheetBody{padding:12px 14px}.customerRequiredGrid,.customerOptionalGrid{grid-template-columns:1fr}.customerOptionalGrid{margin-top:10px}.customerSheetActions{padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+    }
+    @media(max-width:390px){.appBrandTitle{font-size:10px}.topLang select{min-width:72px}.product{grid-template-columns:64px minmax(0,1fr) auto}.product .thumb{width:64px;height:64px}.inputModeToggle{min-width:44px}.clearSearchBtn{min-width:36px}}
+
   </style>
 </head>
 <body>
-  <main class="app">
-    <div class="topbar">
-      <section class="hero">
-        <div class="totalBox"><div class="totalLabel" data-i18n="totalLabel">合計</div><div id="grandTotal" class="total">₩0</div></div>
-        <div class="heroControls">
-          <label class="langMini"><span data-i18n="displayLanguage">言語</span>
-            <select id="langSelect">
-              <option value="ja">日本語</option><option value="ko">한국어</option>
-            </select>
-          </label>
+  <main class="app newApp">
+    <header class="appTopbar">
+      <div class="appTopbarInner">
+        <div class="appBrand">
+          <div class="appBrandMark">SN</div>
+          <div><div class="appBrandTitle">KOREA EXHIBITION ORDER</div><div class="appBrandSub">サンニシムラ 展示会仮注文</div></div>
         </div>
+        <div class="appTopControls">
+          <div class="topTotal"><span data-i18n="totalLabel">合計</span><strong id="grandTotal">₩0</strong></div>
+          <label class="topLang"><span data-i18n="displayLanguage">言語</span><select id="langSelect"><option value="ja">日本語</option><option value="ko">한국어</option></select></label>
+        </div>
+      </div>
+    </header>
+
+    <section class="searchDock" id="searchCard" aria-label="商品検索">
+      <div class="searchDockInner">
+        <div class="searchTitleRow">
+          <div><strong data-i18n="searchTitle">品番・キーワード検索</strong><span id="searchResultStatus" class="searchResultStatus">商品データを準備中</span></div>
+          <span class="searchTip">スマホは数字キーボードから開始 / 숫자 키보드로 시작</span>
+        </div>
+        <div class="nativeSearchRow">
+          <span class="searchIcon" aria-hidden="true">⌕</span>
+          <input id="searchInput" class="nativeSearchInput" type="search" inputmode="numeric" enterkeyhint="search" data-i18n-placeholder="searchPlaceholder" placeholder="品番 / キーワード" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Product code search" />
+          <button id="keyboardMode" class="inputModeToggle" type="button" aria-label="入力モード切替">ABC</button>
+          <button id="clearSearch" class="clearSearchBtn" type="button" aria-label="検索をクリア">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <section class="productArea" aria-label="商品検索結果">
+        <div id="results" class="resultList productGrid"><div class="empty">商品データを読み込んでいます…</div></div>
       </section>
-    </div>
 
-    <section class="flowBanner" aria-labelledby="flowBannerTitle">
-      <div class="flowBannerTitle" id="flowBannerTitle" data-i18n="flowTitle">この端末での注文方法</div>
-      <div class="flowSteps">
-        <div class="flowStep"><span class="stepNo">1</span><div><b data-i18n="flow1Title">商品と数量を入力</b><span data-i18n="flow1Text">会社名・氏名・電話番号も入力します。</span></div></div>
-        <div class="flowStep"><span class="stepNo">2</span><div><b data-i18n="flow2Title">QRをスタッフに見せる</b><span data-i18n="flow2Text">近くのスタッフが内容を確認します。</span></div></div>
-        <div class="flowStep"><span class="stepNo">3</span><div><b data-i18n="flow3Title">印刷画面からPDF保存</b><span data-i18n="flow3Text">スタッフ確認後、印刷画面でPDFを選びます。</span></div></div>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div>
-        <div id="searchCardSpacer" class="searchCardSpacer" aria-hidden="true"></div>
-        <section class="card searchCard" id="searchCard">
-          <h2 class="searchHead"><span data-i18n="searchTitle">品番・キーワード検索</span><span class="row"><button class="secondary keypadOpenBtn keyboardModeBtn" id="keyboardMode" type="button" data-i18n="keyboard">キーボード</button><button class="secondary keypadOpenBtn" id="openKeypad" type="button">テンキー</button></span></h2>
-          <input id="productCount" type="hidden" value="" />
-          <div class="searchLine">
-          <input id="searchInput" class="searchInput" type="text" inputmode="none" data-i18n-placeholder="searchPlaceholder" placeholder="品番 / キーワード" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly aria-label="Product code search" />
-            <button class="secondary compactBtn" id="clearSearch" data-i18n="clear">クリア</button>
-            <button class="secondary compactBtn" id="toggleMode" data-i18n="layoutSwap">配置反転</button>
-          </div>
-          <div class="keypadPanel open side-right" id="keypadPanel" aria-label="Number keypad">
-            <div class="keypadHead" id="keypadHandle">
-              <div><b data-i18n="keypadTitle">テンキー</b><div class="hint" data-i18n="keypadFixed">下部固定</div></div>
-              <div class="keypadTools"><button class="keypadMove" id="toggleKeypadMode" type="button">英字</button><button class="keypadMove" id="toggleKeypadSide" type="button">左へ</button><button class="keypadClose" id="closeKeypad" type="button">畳む</button></div>
-            </div>
-            <div class="keypad" id="keypad"></div>
-          </div>
-          <div id="results" class="resultList"></div>
-        </section>
-
-        <div class="systemControls" aria-hidden="true">
-          <div id="autoLoadNotice"></div>
-          <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" tabindex="-1" />
-          <select id="currencySelect" tabindex="-1"><option value="KRW" selected>KRW / ₩</option></select>
-          <select id="priceMode" tabindex="-1"><option value="with" selected>価格ありPDF</option></select>
+      <aside id="cartPanel" class="cartPanel" aria-label="注文明細">
+        <button id="cartPeek" class="cartPeek" type="button" aria-expanded="false">
+          <span class="cartPeekLeft"><span class="cartIcon">🛒</span><span><b id="cartItemCount">0点</b><small id="cartCustomerStatus">お客様情報 未入力</small></span></span>
+          <span class="cartPeekRight"><strong id="cartDockTotal">₩0</strong><small id="cartToggleLabel">明細を見る</small></span>
+        </button>
+        <div id="miniCartItems" class="miniCartItems"><span class="miniCartEmpty">商品を追加するとここに表示されます</span></div>
+        <div class="cartExpandedBody">
+          <div class="cartPanelHead"><div><h2 data-i18n="orderTitle">注文明細</h2><p>数量変更や削除はここで行えます。</p></div><button id="collapseCart" class="secondary small" type="button">閉じる</button></div>
+          <div id="orderItems" class="orderItems"></div>
+          <div class="cartSubActions"><button class="danger" id="clearOrder" data-i18n="clearOrder">明細を全クリア</button></div>
+          <details class="staffTools"><summary data-i18n="staffToolsTitle">スタッフ用：注文履歴</summary><div class="staffToolsBody"><div id="historyList" class="hint">履歴がありません。</div><div class="toolbar"><button class="secondary" id="exportHistory" data-i18n="exportHistory">履歴CSV出力</button><button class="danger" id="clearHistory" data-i18n="clearHistory">履歴を全削除</button></div></div></details>
         </div>
-      </div>
-
-      <div>
-        <section class="card keypadHideZone"><h2 data-i18n="orderTitle">注文明細</h2><div id="orderItems" class="orderItems"></div><div class="toolbar oneCol"><button class="danger" id="clearOrder" data-i18n="clearOrder">明細を全クリア</button></div></section>
-        <section class="card keypadHideZone" id="customerInfoCard">
-          <h2><span data-i18n="customerTitle">お客様情報</span> <span class="hint" data-i18n="requiredInfo">会社名・氏名・電話番号は必須</span></h2>
-          <div class="miniGrid">
-            <label class="requiredFull"><span data-i18n="companyLabel">会社名</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerCompany" class="requiredInput" required aria-required="true" data-i18n-placeholder="companyPlaceholder" placeholder="会社名を入力" /></label>
-            <label class="requiredFull"><span data-i18n="customerNameLabel">氏名</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerName" class="requiredInput" required aria-required="true" autocomplete="name" data-i18n-placeholder="namePlaceholder" placeholder="氏名を入力" /></label>
-            <label class="requiredFull"><span data-i18n="phoneLabel">電話番号</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerPhone" class="requiredInput" type="tel" inputmode="tel" maxlength="30" required aria-required="true" autocomplete="tel" data-i18n-placeholder="phonePlaceholder" placeholder="電話番号を入力" /></label>
-            <label><span data-i18n="distributorLabel">代理店名</span><input id="distributor" data-i18n-placeholder="optionalPlaceholder" /></label>
-            <label><span data-i18n="staffLabel">担当スタッフ名</span><input id="staffName" data-i18n-placeholder="ifKnownPlaceholder" /></label>
-            <label><span data-i18n="eventLabel">展示会名</span><input id="eventName" data-i18n-placeholder="optionalPlaceholder" /></label>
-          </div>
-          <div id="requiredCustomerError" class="notice danger" role="alert" data-i18n="requiredCustomerInfo" style="display:none">会社名・氏名・電話番号を入力してください。</div>
-          <label style="display:block;margin-top:10px"><span data-i18n="notesLabel">備考</span><textarea id="notes" data-i18n-placeholder="notesPlaceholder" placeholder="サンプル希望・後日確認など"></textarea></label>
-          <div class="notice" data-i18n="privacyNotice">会社名・氏名・電話番号は必須です。メール・SNSの入力は不要です。</div>
-          <div class="checkoutGuide"><div class="checkoutGuideTitle" data-i18n="checkoutGuideTitle">入力が終わったら</div><div class="checkoutGuideText" data-i18n="checkoutGuideText">下のボタンでQRコードを発行し、近くのスタッフに見せてください。スタッフ確認後、控えの印刷画面からPDFとして保存します。</div></div>
-          <div class="receiptCreateActions"><button id="createQr" class="ok primaryCheckout" data-i18n="finishInput">入力完了・スタッフ確認へ</button></div><div class="hint checkoutCtaHint" data-i18n="finishInputHint">このボタンだけでは注文は完了しません。スタッフ確認が必要です。</div>
-        </section>
-        <details class="card keypadHideZone staffTools"><summary data-i18n="staffToolsTitle">スタッフ用：注文履歴</summary><div class="staffToolsBody"><h2 data-i18n="historyTitle">過去の注文履歴</h2><div id="historyList" class="hint">履歴がありません。</div><div class="toolbar"><button class="secondary" id="exportHistory" data-i18n="exportHistory">履歴CSV出力</button><button class="danger" id="clearHistory" data-i18n="clearHistory">履歴を全削除</button></div></div></details>
-      </div>
+        <div class="cartPrimaryActions">
+          <button id="openCustomerDialog" class="customerAction" type="button"><span>👤</span><span><b>お客様情報</b><small id="customerActionSub">会社名・氏名・電話番号</small></span></button>
+          <button id="quickCheckout" class="checkoutAction" type="button"><span>QR発行</span><small>注文確認へ</small></button>
+        </div>
+      </aside>
     </section>
+
+    <div class="systemControls" aria-hidden="true">
+      <input id="productCount" type="hidden" value="" />
+      <div id="autoLoadNotice"></div>
+      <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" tabindex="-1" />
+      <select id="currencySelect" tabindex="-1"><option value="KRW" selected>KRW / ₩</option></select>
+      <select id="priceMode" tabindex="-1"><option value="with" selected>価格ありPDF</option></select>
+    </div>
   </main>
+
+
+  <dialog id="customerDialog" class="customerSheet">
+    <div class="sheetHandle" aria-hidden="true"></div>
+    <div class="customerSheetHead"><div><b>お客様情報 / 고객 정보</b><p>QR発行に必要な情報だけ入力します。</p></div><button id="closeCustomerDialog" class="secondary small" type="button">閉じる</button></div>
+    <div class="customerSheetBody" id="customerInfoCard">
+      <div class="customerRequiredGrid">
+        <label class="requiredFull"><span data-i18n="companyLabel">会社名</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerCompany" class="requiredInput" required aria-required="true" data-i18n-placeholder="companyPlaceholder" placeholder="会社名を入力" /></label>
+        <label class="requiredFull"><span data-i18n="customerNameLabel">氏名</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerName" class="requiredInput" required aria-required="true" autocomplete="name" data-i18n-placeholder="namePlaceholder" placeholder="氏名を入力" /></label>
+        <label class="requiredFull"><span data-i18n="phoneLabel">電話番号</span><span class="requiredBadge" data-i18n="requiredBadge">必須</span><input id="customerPhone" class="requiredInput" type="tel" inputmode="tel" maxlength="30" required aria-required="true" autocomplete="tel" data-i18n-placeholder="phonePlaceholder" placeholder="電話番号を入力" /></label>
+      </div>
+      <div class="customerOptionalGrid">
+        <label><span data-i18n="distributorLabel">代理店名</span><input id="distributor" value="KY-S Corporation." data-i18n-placeholder="optionalPlaceholder" /></label>
+        <label><span data-i18n="staffLabel">担当スタッフ名</span><input id="staffName" data-i18n-placeholder="ifKnownPlaceholder" /></label>
+        <label><span data-i18n="eventLabel">展示会名</span><input id="eventName" data-i18n-placeholder="optionalPlaceholder" /></label>
+      </div>
+      <label class="notesField"><span data-i18n="notesLabel">備考</span><textarea id="notes" data-i18n-placeholder="notesPlaceholder" placeholder="サンプル希望・後日確認など"></textarea></label>
+      <div id="requiredCustomerError" class="notice danger" role="alert" data-i18n="requiredCustomerInfo" style="display:none">会社名・氏名・電話番号を入力してください。</div>
+      <div class="customerPrivacy" data-i18n="privacyNotice">会社名・氏名・電話番号は必須です。メール・SNSの入力は不要です。</div>
+    </div>
+    <div class="customerSheetActions"><button id="saveCustomerInfo" class="secondary" type="button">保存して戻る</button><button id="createQr" class="ok primaryCheckout" type="button" data-i18n="finishInput">入力完了・スタッフ確認へ</button></div>
+  </dialog>
 
   <dialog id="detailDialog"><div class="modalHead"><b data-i18n="productDetail">商品詳細</b><button class="secondary small" id="closeDetail" data-i18n="close">閉じる</button></div><div id="detailBody" class="modalBody"></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <button id="showSearchFab" class="showSearchFab" type="button" aria-label="商品検索へ戻る">🔍 商品検索 / 상품 검색</button>
   <dialog id="qrDialog"><div class="modalHead"><b data-i18n="qrTitle">スタッフ確認用QRコード</b><button class="secondary small" id="closeQr" data-i18n="editOrder">入力を修正</button></div><div class="modalBody qrWrap"><div class="handoffCustomer" data-i18n="handoffCustomer">このQRコードを近くのスタッフに見せてください。スタッフが別の端末で読み取り、注文番号・品番・数量を確認します。</div><div class="qrOrderNo" id="handoffOrderNo"></div><div id="qrCode"></div><div class="hint" data-i18n="qrHint">会社名・氏名・電話番号が注文控えに記録されます。</div><div id="qrWarning" class="notice" style="display:none"></div><div class="staffInstruction"><b>スタッフ / 직원</b><div data-i18n="staffScanInstruction">QRを読み取り、注文番号・品番・数量を確認してください。</div></div><button id="confirmByStaff" class="staffConfirmBtn" type="button"><span data-i18n="staffConfirmButton">STAFF / スタッフ：内容を確認しました</span></button><div class="customerNextBox"><b data-i18n="customerNextTitle">お客様：スタッフ確認後</b><div id="customerNextText" data-i18n="customerNextText">下のボタンから控えを開き、印刷画面でPDFとして保存してください。</div></div><details class="manualLinkBox"><summary data-i18n="manualLink">QRが読めない場合のURL</summary><div class="mono" id="receiptUrl"></div></details><div class="qrActions"><button id="openReceipt" class="ok" data-i18n="openReceipt" disabled>スタッフ確認後、控えを開く</button><button id="copyUrl" class="secondary" data-i18n="copyUrl">確認用URLをコピー</button><button id="newOrder" class="secondary" data-i18n="cancelQr">QRを取り消す</button></div></div></dialog>
 
   <section class="receiptPage"><div id="receiptRoleNotice" class="receiptRoleNotice" aria-live="polite"></div><div class="receiptActions"><select id="receiptLangSelect" style="max-width:180px" aria-label="Receipt language"><option value="ja">日本語</option><option value="ko">한국어</option></select><button id="printReceipt" class="ok">印刷してPDF保存</button><button id="backToApp" class="secondary">戻る</button></div><div id="receiptSaveHint" class="mobileSaveHint"></div><div id="receiptPrintArea" class="receiptSheet"></div></section>
@@ -212,8 +242,19 @@
         mobileSaveTitle:'手机PDF保存方法',browserRecommended:'请在Safari / Chrome中打开',languageChanged:'已切换显示语言。如有需要，请重新打印。',imageFailed:'无法生成图片。请尝试打印或截屏。',addedToOrder:'已加入订单'
       }
     };
-    function init(){ if(location.hash.startsWith('#receipt=')||location.hash.startsWith('#staff=')){ showReceiptFromHash(); return; } const savedLang=localStorage.getItem('qrDisplayLang'); if(savedLang&&['ja','ko'].includes(savedLang)) $('langSelect').value=savedLang; buildKeypad(); attachEvents(); setupKeypadPanel(); initPriceMode(); applyI18n(); setKeyboardInputMode(isDesktopKeyboardEnvironment()); $('results').innerHTML=`<div class="empty">${sanitize(txt('loading'))}</div>`; loadDefaultCsv(); renderOrder(); renderHistory(); }
-    function applyI18n(){ const lang=currentLang(); document.documentElement.lang = lang; document.querySelectorAll('[data-i18n]').forEach(el => { const key=el.dataset.i18n; const value=extraT[lang]?.[key]||t[lang]?.[key]; if(value) el.textContent=value; }); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{ const value=txt(el.dataset.i18nPlaceholder,lang); if(value) el.placeholder=value; }); if($('keyboardMode')) $('keyboardMode').textContent=txt(keyboardInputEnabled?'keyboardOff':'keyboard'); if($('openKeypad')) $('openKeypad').textContent=txt('keypadButton'); renderKeypad(); setKeypadSide(localStorage.getItem('qrKeypadSide')||'right'); setKeypadMinimized($('keypadPanel')?.classList.contains('minimized')); syncPriceModeToggle(); renderResults(); renderOrder(); renderHistory(); }
+    function init(){
+      if(location.hash.startsWith('#receipt=')||location.hash.startsWith('#staff=')){ showReceiptFromHash(); return; }
+      const savedLang=localStorage.getItem('qrDisplayLang'); if(savedLang&&['ja','ko'].includes(savedLang)) $('langSelect').value=savedLang;
+      attachEvents(); initPriceMode(); applyI18n(); setNativeSearchMode('numeric',false);
+      $('results').innerHTML=`<div class="empty">${sanitize(txt('loading'))}</div>`;
+      loadDefaultCsv(); renderOrder(); renderHistory();
+    }
+    function applyI18n(){
+      const lang=currentLang(); document.documentElement.lang=lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;const value=extraT[lang]?.[key]||t[lang]?.[key];if(value)el.textContent=value;});
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const value=txt(el.dataset.i18nPlaceholder,lang);if(value)el.placeholder=value;});
+      renderResults(); renderOrder(); renderHistory(); updateCustomerStatus();
+    }
     function txt(key, lang=currentLang()){ return extraT[lang]?.[key] || t[lang]?.[key] || extraT.en?.[key] || t.en[key] || key; }
     async function ensureLib(globalName){
       if(window[globalName]) return true;
@@ -323,88 +364,52 @@
     }
     function attachEvents(){
       const search=$('searchInput');
-      search.addEventListener('input', renderResults);
-      search.addEventListener('focus',()=>{ if(!keyboardInputEnabled) setTimeout(()=>search.blur(),0); });
-      search.addEventListener('click',()=>{ if(!keyboardInputEnabled) search.blur(); });
-      search.addEventListener('touchstart',e=>{ if(!keyboardInputEnabled){ e.preventDefault(); search.blur(); } },{passive:false});
-      ['customerCompany','customerName','customerPhone'].forEach(id=>$(id)?.addEventListener('input',e=>{ e.target.classList.remove('invalid'); if($('customerCompany').value.trim()&&$('customerName').value.trim()&&$('customerPhone').value.trim()) $('requiredCustomerError').style.display='none'; }));
-      $('langSelect').addEventListener('change',()=>{ localStorage.setItem('qrDisplayLang',currentLang()); applyI18n(); });
-      $('priceModeToggle')?.addEventListener('change', e=>setPriceMode(e.target.checked ? 'with' : 'without'));
-      $('clearSearch').onclick=()=>{$('searchInput').value='';renderResults();};
-      $('keyboardMode').onclick=()=>setKeyboardInputMode(!keyboardInputEnabled);
-      $('toggleMode').onclick=()=>document.querySelector('.grid').style.direction=document.querySelector('.grid').style.direction==='rtl'?'ltr':'rtl';
-      $('openKeypad').onclick=()=>{ setKeypadMinimized(false); setKeypadSide(localStorage.getItem('qrKeypadSide')||'right'); $('searchInput').blur(); };
-      $('closeKeypad').onclick=()=>setKeypadMinimized(!$('keypadPanel').classList.contains('minimized'));
-      $('toggleKeypadMode').onclick=()=>toggleKeypadInputMode();
-      $('toggleKeypadSide').onclick=()=>toggleKeypadSide();
-      $('fileInput')?.addEventListener('change', handleFile);
-      $('clearOrder').onclick=()=>{ if(confirm(txt('clearOrderConfirm'))){order=[];renderOrder();}};
+      search.addEventListener('input',renderResults);
+      search.addEventListener('focus',()=>{ if(window.innerWidth<=760 && search.inputMode!=='numeric' && !/[A-Za-z]/.test(search.value)) setNativeSearchMode('numeric',false); });
+      $('keyboardMode').onclick=()=>setNativeSearchMode(search.inputMode==='numeric'?'search':'numeric',true);
+      $('clearSearch').onclick=()=>{search.value='';renderResults();search.focus();};
+      $('langSelect').addEventListener('change',()=>{localStorage.setItem('qrDisplayLang',currentLang());applyI18n();});
+      $('fileInput')?.addEventListener('change',handleFile);
+      $('clearOrder').onclick=()=>{if(confirm(txt('clearOrderConfirm'))){order=[];renderOrder();}};
+      $('cartPeek').onclick=toggleCartPanel;
+      $('collapseCart').onclick=()=>setCartExpanded(false);
+      $('openCustomerDialog').onclick=openCustomerSheet;
+      $('closeCustomerDialog').onclick=()=>$('customerDialog').close();
+      $('saveCustomerInfo').onclick=()=>{$('customerDialog').close();updateCustomerStatus();renderOrder();};
+      $('quickCheckout').onclick=()=>{ if(!customerInfoComplete()){openCustomerSheet(true);}else{createQrReceipt();} };
       $('createQr').onclick=createQrReceipt;
-      $('closeQr').onclick=()=>{ $('qrDialog').close(); pendingStaffConfirmed=false; };
+      ['customerCompany','customerName','customerPhone','distributor','staffName','eventName','notes'].forEach(id=>$(id)?.addEventListener('input',()=>{updateCustomerStatus();if(['customerCompany','customerName','customerPhone'].includes(id))$(id).classList.remove('invalid');}));
+      $('closeQr').onclick=()=>{$('qrDialog').close();pendingStaffConfirmed=false;};
       $('closeDetail').onclick=()=>$('detailDialog').close();
       $('confirmByStaff').onclick=confirmStaffHandoff;
       $('openReceipt').onclick=openCustomerReceipt;
       $('copyUrl').onclick=copyStaffUrl;
-      $('newOrder').onclick=()=>{ if(confirm(txt('cancelQrConfirm'))){ $('qrDialog').close(); pendingStaffConfirmed=false; pendingReceiptData=null; lastReceiptUrl=''; lastStaffQrUrl=''; } };
-      $('saveHistory')?.addEventListener('click',()=>saveHistory(false));
+      $('newOrder').onclick=()=>{if(confirm(txt('cancelQrConfirm'))){$('qrDialog').close();pendingStaffConfirmed=false;pendingReceiptData=null;lastReceiptUrl='';lastStaffQrUrl='';}};
       $('exportHistory').onclick=exportHistoryCsv;
-      $('clearHistory').onclick=()=>{ if(confirm(txt('clearHistoryConfirm'))){localStorage.removeItem('qrOrderHistory');renderHistory();}};
-      $('currencySelect')?.addEventListener('change', renderOrder);
+      $('clearHistory').onclick=()=>{if(confirm(txt('clearHistoryConfirm'))){localStorage.removeItem('qrOrderHistory');renderHistory();}};
+      $('currencySelect')?.addEventListener('change',renderOrder);
       $('priceMode')?.addEventListener('change',()=>setPriceMode($('priceMode').value));
-      initCustomerFocusSearchUi();
-      initSearchCardStickyUi();
+      window.addEventListener('resize',()=>{if(window.innerWidth>760)setCartExpanded(false);},{passive:true});
     }
-    function isDesktopKeyboardEnvironment(){ return window.innerWidth>=820 && (window.matchMedia?.('(pointer:fine)').matches ?? true); }
-    function setKeyboardInputMode(enabled){ keyboardInputEnabled=!!enabled; const input=$('searchInput'), btn=$('keyboardMode'); input.readOnly=!keyboardInputEnabled; input.setAttribute('inputmode',keyboardInputEnabled?'search':'none'); input.style.caretColor=keyboardInputEnabled?'auto':'transparent'; input.style.cursor=keyboardInputEnabled?'text':'default'; btn?.classList.toggle('active',keyboardInputEnabled); if(btn) btn.textContent=txt(keyboardInputEnabled?'keyboardOff':'keyboard'); if(keyboardInputEnabled){ setKeypadMinimized(true); }else input.blur(); }
-    let customerFieldFocused=false, forceSearchVisible=false, searchResizeObserver=null;
-    function isMobileSearchLayout(){ return window.innerWidth<=820; }
-    function syncMobileSearchGeometry(){
-      const card=$('searchCard'), spacer=$('searchCardSpacer'), topbar=document.querySelector('.topbar');
-      if(!card || !spacer) return;
-      if(!isMobileSearchLayout()){ spacer.style.height='0px'; document.documentElement.style.removeProperty('--mobile-search-space'); document.documentElement.style.removeProperty('--search-fixed-top'); return; }
-      const top=Math.max(8,Math.ceil(topbar?.getBoundingClientRect().bottom||68)+6);
-      document.documentElement.style.setProperty('--search-fixed-top',`${top}px`);
-      const hidden=card.classList.contains('searchCardHidden');
-      const height=hidden?0:Math.ceil(card.getBoundingClientRect().height)+10;
-      spacer.style.height=`${height}px`;
-      document.documentElement.style.setProperty('--mobile-search-space',`${height}px`);
+    function setNativeSearchMode(mode,refocus=true){
+      const input=$('searchInput'),btn=$('keyboardMode'); if(!input)return;
+      const numeric=mode==='numeric'; input.setAttribute('inputmode',numeric?'numeric':'search'); btn.textContent=numeric?'ABC':'123'; btn.setAttribute('aria-label',numeric?'英字キーボードに切り替え':'数字キーボードに切り替え');
+      if(refocus){input.blur();setTimeout(()=>input.focus(),40);}
     }
-    function setSearchCardHidden(hidden){
-      const card=$('searchCard'), fab=$('showSearchFab');
-      if(!card) return;
-      card.classList.toggle('searchCardHidden',!!hidden);
-      fab?.classList.toggle('show',!!hidden);
-      fab?.setAttribute('aria-hidden',hidden?'false':'true');
-      requestAnimationFrame(syncMobileSearchGeometry);
+    function customerInfoComplete(){return !!($('customerCompany')?.value.trim()&&$('customerName')?.value.trim()&&$('customerPhone')?.value.trim());}
+    function openCustomerSheet(focusMissing=false){
+      const d=$('customerDialog'); if(!d.open)d.showModal();
+      if(focusMissing)setTimeout(()=>{const target=['customerCompany','customerName','customerPhone'].map($).find(x=>!x.value.trim());target?.focus();},120);
     }
-    function updateSearchPanelVisibility(){
-      const searchCard=$('searchCard'), customerCard=$('customerInfoCard');
-      if(!searchCard || !customerCard) return;
-      searchCard.classList.toggle('searchCompact',window.scrollY>40);
-      if(forceSearchVisible){ setSearchCardHidden(false); return; }
-      const mobileLayout=isMobileSearchLayout();
-      const r=customerCard.getBoundingClientRect();
-      const customerSectionInUse=mobileLayout && r.top<window.innerHeight*0.48 && r.bottom>Math.max(80,parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--search-fixed-top'))||80);
-      setSearchCardHidden(customerFieldFocused||customerSectionInUse);
+    function updateCustomerStatus(){
+      const complete=customerInfoComplete(),name=$('customerCompany')?.value.trim()||'';
+      const status=$('cartCustomerStatus'),sub=$('customerActionSub');
+      if(status)status.textContent=complete?(name||'お客様情報 入力済み'):'お客様情報 未入力';
+      if(sub)sub.textContent=complete?'入力済み・タップして編集':'会社名・氏名・電話番号';
+      $('openCustomerDialog')?.classList.toggle('complete',complete);
     }
-    function initCustomerFocusSearchUi(){
-      const customerCard=$('customerInfoCard'), fab=$('showSearchFab'), spacer=$('searchCardSpacer');
-      if(!customerCard) return;
-      customerCard.addEventListener('focusin',e=>{ if(e.target.matches('input, textarea, select')){ customerFieldFocused=true; forceSearchVisible=false; updateSearchPanelVisibility(); } });
-      customerCard.addEventListener('focusout',()=>{ setTimeout(()=>{ customerFieldFocused=customerCard.contains(document.activeElement); updateSearchPanelVisibility(); },40); });
-      fab?.addEventListener('click',()=>{
-        forceSearchVisible=true; customerFieldFocused=false; document.activeElement?.blur?.(); setSearchCardHidden(false);
-        const target=Math.max(0,(spacer?.offsetTop||0)-90); window.scrollTo({top:target,behavior:'smooth'});
-        setTimeout(()=>{ if(isDesktopKeyboardEnvironment()){ setKeyboardInputMode(true); $('searchInput')?.focus(); }else{ setKeypadMinimized(false); } forceSearchVisible=false; updateSearchPanelVisibility(); },550);
-      });
-    }
-    function initSearchCardStickyUi(){
-      const card=$('searchCard');
-      const update=()=>{ const desktop=isDesktopKeyboardEnvironment(); if(desktop!==keyboardInputEnabled) setKeyboardInputMode(desktop); updateSearchPanelVisibility(); syncMobileSearchGeometry(); };
-      window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update,{passive:true});
-      if(window.ResizeObserver&&card){ searchResizeObserver=new ResizeObserver(()=>syncMobileSearchGeometry()); searchResizeObserver.observe(card); }
-      update();
-    }
+    function setCartExpanded(expanded){const panel=$('cartPanel');if(!panel)return;panel.classList.toggle('expanded',!!expanded);$('cartPeek')?.setAttribute('aria-expanded',expanded?'true':'false');const label=$('cartToggleLabel');if(label)label.textContent=expanded?'閉じる':'明細を見る';}
+    function toggleCartPanel(){if(window.innerWidth<=760)setCartExpanded(!$('cartPanel').classList.contains('expanded'));}
     function prepareProducts(list){ return list.map(p=>{ p._codeSearch=normalizeProductCodeSearch(p.code); p._search=normalizeKeywordText([...Object.values(p.names||{}),...Object.values(p.usages||{}),...Object.values(p.benefits||{}),p.catalog].join(' ')); return p; }); }
     function restoreOrder(){ try{ const saved=JSON.parse(localStorage.getItem('qrDraftOrder')||'[]'); order=saved.map(s=>{ const p=products.find(x=>String(x.code)===String(s.code)); return p?{...p,qty:Math.max(1,Number(s.qty)||1)}:null; }).filter(Boolean); }catch(err){ order=[]; } }
     async function loadDefaultCsv(){ try{ const res = await fetch(DATA_FILE, {cache:'default'}); if(!res.ok) throw new Error('no default csv'); const text = await res.text(); products=prepareProducts(parseCsv(text).map(normalizeRow).filter(p=>p.code)); restoreOrder(); if($('autoLoadNotice')) $('autoLoadNotice').innerHTML=`<b>${products.length.toLocaleString('ja-JP')}件</b>の商品マスターを読み込みました。`; renderResults(); renderOrder(); }catch(err){ products=[]; order=[]; if($('autoLoadNotice')) $('autoLoadNotice').textContent=txt('loadFailed'); $('results').innerHTML=`<div class="empty loadError">${sanitize(txt('loadFailed'))}</div>`; renderOrder(); }}
@@ -438,19 +443,17 @@
       const lang=currentLang(), qRaw=$('searchInput').value.trim();
       if(!qRaw){
         const prompt=txt('enterSearch',lang);
-        if($('productCount')) $('productCount').value=`${products.length.toLocaleString('ja-JP')} / 0`;
+        if($('productCount')) $('productCount').value=`${products.length.toLocaleString('ja-JP')} / 0`; if($('searchResultStatus')) $('searchResultStatus').textContent=`${products.length.toLocaleString('ja-JP')}商品`;
         $('results').innerHTML=`<div class="empty">${sanitize(prompt)}</div>`;
         updateKeypadVisibilitySoon();
-        requestAnimationFrame(syncMobileSearchGeometry);
         return;
       }
       const list=products.map((p,idx)=>({p,idx,m:productMatch(p,qRaw)})).filter(x=>x.m).sort((a,b)=>(a.m?.rank??9)-(b.m?.rank??9)||String(a.p.code).localeCompare(String(b.p.code),'ja',{numeric:true})||a.idx-b.idx).slice(0,60);
-      if($('productCount')) $('productCount').value=`${products.length.toLocaleString('ja-JP')} / ${list.length.toLocaleString('ja-JP')}`;
+      if($('productCount')) $('productCount').value=`${products.length.toLocaleString('ja-JP')} / ${list.length.toLocaleString('ja-JP')}`; if($('searchResultStatus')) $('searchResultStatus').textContent=`${list.length.toLocaleString('ja-JP')}件表示 / ${products.length.toLocaleString('ja-JP')}商品`;
       $('results').innerHTML=list.length?list.map(({p,m})=>`<article class="product">${thumbHtml(p)}<div><div class="code">${sanitize(p.code)}</div><div class="name">${sanitize(nameOf(p,lang))}</div><div class="metaLine">${m?.label?`<span class="badge ${m.className}">${sanitize(m.label)}</span>`:''}${usageBadgeHtml(p,lang)}${packBadgeHtml(p,lang)}${catalogLabel(p.catalog,lang)?`<span class="badge">${sanitize(catalogLabel(p.catalog,lang))}</span>`:''}</div></div><div class="productActions"><div class="price">${sanitize(priceDisplay(p.price,p.currency||$('currencySelect').value))}</div><button class="small" data-add="${sanitize(p.code)}">${txt('add')}</button><button class="secondary small" data-detail="${sanitize(p.code)}">${txt('detail')}</button></div></article>`).join(''):`<div class="empty">${txt('notFound')}</div>`;
       $('results').querySelectorAll('[data-add]').forEach(btn=>btn.onclick=()=>addProduct(btn.dataset.add));
       $('results').querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>showProductDetail(btn.dataset.detail));
       updateKeypadVisibilitySoon();
-      requestAnimationFrame(syncMobileSearchGeometry);
     }
 
     function setupKeypadPanel(){
@@ -458,12 +461,7 @@
       setKeypadMinimized(false);
       setupKeypadAutoHide();
     }
-    function updateKeypadVisibilitySoon(){
-      const update=window.updateKeypadAutoHide;
-      if(typeof update!=='function') return;
-      const raf=window.requestAnimationFrame || (fn=>setTimeout(fn,0));
-      raf(update);
-    }
+    function updateKeypadVisibilitySoon(){}
     function setKeypadSide(side){
       const panel=$('keypadPanel');
       if(!panel)return;
@@ -503,7 +501,19 @@
     function showToast(message){ const el=$('toast'); if(!el)return; el.textContent=message; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),1800); }
     function addProduct(code){ const p=products.find(x=>String(x.code)===String(code)); if(!p)return; const existing=order.find(x=>String(x.code)===String(code)); if(existing) existing.qty+=1; else order.push({...p, qty:1}); renderOrder(); showToast(`${nameOf(p)} — ${txt('addedToOrder')}`); }
     function showProductDetail(code){ const p=products.find(x=>String(x.code)===String(code)); if(!p)return; const lang=currentLang(); $('detailBody').innerHTML=`<div class="detailHero">${thumbHtml(p)}<div><div class="detailCode">${sanitize(p.code)}</div><div class="detailTitle">${sanitize(nameOf(p,lang))}</div><div class="detailPrice">${sanitize(priceDisplay(p.price,p.currency||$('currencySelect').value))}</div>${detailInfoHtml(p,lang)}${specsInfoHtml(p,lang)}${officialLinkHtml(p,lang)}<div class="metaLine">${packBadgeHtml(p,lang)}${catalogLabel(p.catalog,lang)?`<span class="badge">${sanitize(catalogLabel(p.catalog,lang))}</span>`:''}</div><div class="row wrap" style="margin-top:14px"><button data-add-detail="${sanitize(p.code)}">${txt('add')}</button><button class="secondary" onclick="document.getElementById('detailDialog').close()">${txt('close')}</button></div></div></div>`; $('detailBody').querySelector('[data-add-detail]').onclick=()=>{addProduct(code);$('detailDialog').close();}; $('detailDialog').showModal(); }
-    function renderOrder(){ if(!$('orderItems')) return; const lang=currentLang(), showPrices=pricesVisible(); $('orderItems').innerHTML=order.length?order.map((item,idx)=>`<article class="lineItem">${thumbHtml(item)}<div><div class="code">${sanitize(item.code)}</div><div class="name">${sanitize(nameOf(item,lang))}</div>${packLabel(item,lang)?`<div class="pack">${sanitize(txt('packQty',lang))}: ${sanitize(packLabel(item,lang))}</div>`:''}<div class="qtyCtl"><button data-minus="${idx}">−</button><input data-qty="${idx}" value="${item.qty}" inputmode="numeric" /><button data-plus="${idx}">＋</button></div></div><div class="right"><button class="danger small" data-del="${idx}">${sanitize(txt('delete',lang))}</button><div class="subtotal">${sanitize(showPrices?fmt(item.price*item.qty,item.currency||$('currencySelect').value):txt('priceHidden',lang))}</div></div></article>`).join(''):`<div class="empty">${txt('empty')}</div>`; $('orderItems').querySelectorAll('[data-minus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.minus,-1)); $('orderItems').querySelectorAll('[data-plus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.plus,1)); $('orderItems').querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{order.splice(+b.dataset.del,1);renderOrder();}); $('orderItems').querySelectorAll('[data-qty]').forEach(input=>input.onchange=()=>{ const i=+input.dataset.qty; order[i].qty=Math.max(1,parseInt(input.value||'1',10)); renderOrder(); }); const total=order.reduce((sum,item)=>sum+Number(item.price||0)*Number(item.qty||0),0); $('grandTotal').textContent=showPrices?fmt(total,$('currencySelect')?.value||'JPY'):txt('priceHidden',lang); localStorage.setItem('qrDraftOrder',JSON.stringify(order.map(i=>({code:i.code,qty:i.qty})))); updateKeypadVisibilitySoon(); }
+    function renderOrder(){
+      if(!$('orderItems'))return;
+      const lang=currentLang(),showPrices=pricesVisible();
+      $('orderItems').innerHTML=order.length?order.map((item,idx)=>`<article class="lineItem">${thumbHtml(item)}<div><div class="code">${sanitize(item.code)}</div><div class="name">${sanitize(nameOf(item,lang))}</div><div class="qtyCtl"><button data-minus="${idx}">−</button><input data-qty="${idx}" value="${item.qty}" inputmode="numeric"/><button data-plus="${idx}">＋</button></div></div><div class="right"><button class="danger small" data-del="${idx}">${sanitize(txt('delete',lang))}</button><div class="subtotal">${sanitize(showPrices?fmt(item.price*item.qty):txt('priceHidden',lang))}</div></div></article>`).join(''):`<div class="empty">${txt('empty')}</div>`;
+      $('orderItems').querySelectorAll('[data-minus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.minus,-1));
+      $('orderItems').querySelectorAll('[data-plus]').forEach(b=>b.onclick=()=>changeQty(+b.dataset.plus,1));
+      $('orderItems').querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{order.splice(+b.dataset.del,1);renderOrder();});
+      $('orderItems').querySelectorAll('[data-qty]').forEach(input=>input.onchange=()=>{const i=+input.dataset.qty;order[i].qty=Math.max(1,parseInt(input.value||'1',10));renderOrder();});
+      const total=order.reduce((sum,item)=>sum+Number(item.price||0)*Number(item.qty||0),0),qty=order.reduce((sum,item)=>sum+Number(item.qty||0),0);
+      $('grandTotal').textContent=fmt(total); $('cartDockTotal').textContent=fmt(total); $('cartItemCount').textContent=`${qty}点・${order.length}品番`;
+      $('miniCartItems').innerHTML=order.length?order.slice(-6).reverse().map(i=>`<span class="miniCartChip">${sanitize(i.code)} × ${sanitize(i.qty)}</span>`).join(''):`<span class="miniCartEmpty">商品を追加するとここに表示されます</span>`;
+      localStorage.setItem('qrDraftOrder',JSON.stringify(order.map(i=>({code:i.code,qty:i.qty}))));updateCustomerStatus();
+    }
     function changeQty(idx,delta){ order[idx].qty=Math.max(1,Number(order[idx].qty||1)+delta); renderOrder(); }
     async function handleFile(e){ const file=e.target.files?.[0]; if(!file)return; const ext=file.name.split('.').pop().toLowerCase(); try{ if(ext==='csv'){ products=prepareProducts(parseCsv(await file.text()).map(normalizeRow).filter(p=>p.code)); }else{ if(!(await ensureLib('XLSX'))) throw new Error('XLSX library is not loaded. Please try CSV.'); const buf=await file.arrayBuffer(); const wb=XLSX.read(buf,{type:'array'}); const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{defval:''}); products=prepareProducts(rows.map(normalizeRow).filter(p=>p.code)); } restoreOrder(); alert(`${products.length} products loaded`); renderResults(); renderOrder(); }catch(err){ alert('Import error: '+err.message); } }
     function parseCsv(text){ const rows=[]; let row=[], cell='', q=false; for(let i=0;i<text.length;i++){ const c=text[i], n=text[i+1]; if(c==='"'&&q&&n==='"'){cell+='"';i++;continue;} if(c==='"'){q=!q;continue;} if(c===','&&!q){row.push(cell);cell='';continue;} if((c==='\n'||c==='\r')&&!q){ if(cell||row.length){row.push(cell);rows.push(row);row=[];cell='';} if(c==='\r'&&n==='\n')i++; continue;} cell+=c; } if(cell||row.length){row.push(cell);rows.push(row);} const headers=rows.shift()?.map(h=>h.trim().replace(/^\uFEFF/,''))||[]; return rows.map(r=>Object.fromEntries(headers.map((h,i)=>[h,r[i]??'']))); }
@@ -590,7 +600,7 @@
     async function buildReceiptUrl(data,mode='receipt'){ const compact=compactReceiptPayload(data,mode); return `${location.origin}${location.pathname}#${mode}=${await encodeData(compact)}`; }
     async function createQrReceipt(){
       if(!order.length){ alert(txt('noItems')); return; }
-      if(!validateRequiredCustomer()) return;
+      if(!validateRequiredCustomer()){openCustomerSheet(true);return;}
       const signature=currentDraftSignature();
       if(!pendingReceiptData||pendingDraftSignature!==signature){ pendingReceiptData=buildReceiptData(); pendingDraftSignature=signature; }
       pendingStaffConfirmed=false;
@@ -615,7 +625,7 @@
         try{ if(!window.QRCode) throw new Error('QR library unavailable'); new QRCode($('qrCode'),{text:lastStaffQrUrl,width:dense?320:280,height:dense?320:280,correctLevel:dense?QRCode.CorrectLevel.L:QRCode.CorrectLevel.M}); }
         catch(err){ warn.style.display='block'; warn.textContent=txt('qrGenerationFailed'); $('qrCode').innerHTML=`<div class="notice danger">${sanitize(txt('qrGenerationFailed'))}</div>`; }
       }
-      $('qrDialog').showModal();
+      if($('customerDialog')?.open)$('customerDialog').close(); $('qrDialog').showModal();
     }
     function confirmStaffHandoff(){ if(!pendingReceiptData)return; pendingStaffConfirmed=true; pendingReceiptData.status='staff_verified'; pendingReceiptData.confirmedAt=new Date().toISOString(); const btn=$('confirmByStaff'); btn.classList.add('confirmed'); btn.disabled=true; btn.querySelector('span').textContent=txt('staffConfirmedButton'); $('openReceipt').disabled=false; $('customerNextText').textContent=txt('customerNextReady'); }
     async function openCustomerReceipt(){ if(!pendingReceiptData||!pendingStaffConfirmed){ alert(txt('staffRequired')); return; } lastReceiptUrl=await buildReceiptUrl(pendingReceiptData,'receipt'); saveHistory(true,pendingReceiptData); $('qrDialog').close(); try{ history.pushState(null,'',lastReceiptUrl); }catch(err){ location.hash=lastReceiptUrl.split('#')[1]||''; } await showReceiptFromHash(); }
